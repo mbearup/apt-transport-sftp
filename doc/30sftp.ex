@@ -1,8 +1,9 @@
 Acquire {
   sftp {
-    timeout::myhost:2222=40;
-    Username::myhost:2222=repo;
-    PrivkeyFile::myhost:2222=/var/srepo/sftp;
-    PubkeyFile::myhost:2222=/var/srepo/sftp.pub;
+    timeout 40;
+    Username repoclient;
+    PrivkeyFile /var/srepo/repoclient;
+    PubKeyFile /var/srepo/repoclient.pub;
+    KnownHosts /etc/ssh/known_hosts;
   };
 };

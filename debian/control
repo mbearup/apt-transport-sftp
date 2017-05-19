@@ -1,6 +1,9 @@
 Source: apt-transport-sftp
+Package: apt-transport-sftp
+Version: 0.2.1
 Section: admin
 Priority: optional
+Architecture: amd64
 Maintainer: Pantelis Koukousoulas <pktoss@gmail.com>
 Homepage: https://github.com/pkt/apt-transport-sftp
 Standards-Version: 3.9.3
@@ -10,10 +13,7 @@ Build-Depends: debhelper (>= 8.0.0),
  pkg-config
 #Vcs-Git: https://github.com/pkt/apt-transport-sftp
 #Vcs-Browser: https://github.com/pkt/apt-transport-sftp
-
-Package: apt-transport-sftp
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: libc6 (>= 2.0.0),libssh2-1 (>= 1.0.0), libapt-pkg5.0 (>= 1.0.0)
 Description: SFTP transport method for APT
  This package provides an sftp transport method for APT. In contrast
  to the ssh method, sftp doesn't require shell access to the server,
